@@ -56,18 +56,12 @@ header li {
     text-decoration-thickness: 3px;
 }
 
-.profile-pic {
-    padding-left: 20px;
-    max-width: 13%;
-    height: auto;
-}
-
+/* basic formatting for the main section where I have the content */
 .content {
     display: flex;
     flex-direction: row;
     margin-bottom: 25px;
 }
-
 
 .content-header {
     flex: 1 1 auto;
@@ -78,22 +72,41 @@ header li {
 }
 
 .content-body {
-    display: flex;
     width: 90%;
+    display: flex;
     padding-left: 20px;
-    justify-content: space-evenly;
 }
 
-.content-body p {
-    padding: 10px;
+
+
+/* code where i affect the about me section */
+
+#about-me.content-body {
+    width: 90%;
+    align-items: center;
+    height: auto;
 }
+.me-pic {
+    width:200px;
+}
+.profile-pic {
+    width: 200px;
+    height: auto;
+}
+
+.about-me-para {
+    height: auto;
+    margin-left: 10px;
+    padding-left: 5px;
+}
+
+
+/* This is the work code for formatting and fitting up */
 
 #squares.content-body { 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-
 }
 
 #one.image-container {
@@ -117,21 +130,23 @@ header li {
     margin-bottom: 10px;
 }
 
-
 #two.image-container {
     position: relative;
-    width: 50%;
+    width: 46%;
 }
 
 .image-container .small-ass {
-    width: 80%;
+    width: 95.5%;
     border: 5px solid black;
     height: 250px;
     margin-bottom: 10px;
 }
 
-
-
+/* This is where the code formats and affect the contact me section */
+#contact-info.content-body {
+    width: 90%;
+    justify-content: space-evenly;
+}
 
 
 /* This is the media section which gives responsiveness to changing screen width */
@@ -141,6 +156,10 @@ header li {
     header {
         flex-direction: column;
         justify-content: center;
+    }
+    
+    h1 {
+        padding-right: 5%;
     }
 
     .content {
@@ -161,27 +180,64 @@ header li {
         width: 100%;
         padding: 0;
     }
+
+    .about-me-para {
+        margin: auto;
+    }
+
+    #squares.content-body {
+        justify-content: center;
+    } 
+
+    #one.image-container {
+        width: 92%;
+        margin-top: 10px;
+    }
+
+    .image-container .main-ass {
+        width: 98%;
+    }
+
+
+
 }
 
 
 @media screen and (max-width: 425px) {    
+    
+
+
+    .me-pic {
+        display: none;
+    }
+
     #squares.content-body { 
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
-    
-    .main-ass {
-        width: 90%;
+
+    #one.image-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #two.image-container {
+        width: 100%;
+    }
+
+    .image-container .main-ass {
+        width: 95%;
         margin-top: 10px;
         margin-left: auto;
         margin-right: auto;
-        height: 100px;
+        height: 200px;
     }
-    .small-ass {
-        width: 90%;
+    .image-container .small-ass {
+        width: 95%;
         margin-left: auto;
         margin-right: auto;
-        height: 100px;
+        height: 200px;
     }
 
     #contact-info.content-body {

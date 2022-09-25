@@ -146,6 +146,7 @@ header li {
 #contact-info.content-body {
     width: 90%;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 

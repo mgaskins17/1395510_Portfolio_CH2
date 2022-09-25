@@ -1,0 +1,202 @@
+/* This is the css style sheet for my portfolio challenge 2 */
+html {
+    background-color: #F0EAD6;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1%;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+h1 {
+    padding-left: 5%;
+    background-color: lightblue;
+    font-size: 3rem;
+}
+
+.subtitle {
+    padding: 1%;
+    background-color: aquamarine; 
+    font-size: 1.15rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+header a:link {
+    text-decoration: none;
+}
+
+nav {
+    padding-right: 3%;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: lightblue;
+}
+
+header li {
+    margin: 10px;
+    justify-content: space-evenly;
+    color: lightblue;
+    font-size: 1.15rem;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 3px;
+}
+
+.profile-pic {
+    padding-left: 20px;
+    max-width: 13%;
+    height: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+}
+
+
+.content-header {
+    flex: 1 1 auto;
+    min-width: 15%;
+    text-align: right;
+    border-right: 5px solid black;
+    padding-right: 10px;
+}
+
+.content-body {
+    display: flex;
+    width: 90%;
+    padding-left: 20px;
+    justify-content: space-evenly;
+}
+
+.content-body p {
+    padding: 10px;
+}
+
+#squares.content-body { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+#one.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.text-block {
+    position: absolute;
+    bottom: 40px;
+    left: 0px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.image-container .main-ass {
+    width: 90%;
+    border: 5px solid black;
+    margin-bottom: 10px;
+}
+
+
+#two.image-container {
+    position: relative;
+    width: 50%;
+}
+
+.image-container .small-ass {
+    width: 80%;
+    border: 5px solid black;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/* This is the media section which gives responsiveness to changing screen width */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .profile-pic {
+        display: none;
+    }
+
+    .content-header {
+        text-align: center;
+        border-right: none;
+        border-bottom: 5px solid black;
+    }
+
+    .content-body {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+
+@media screen and (max-width: 425px) {    
+    #squares.content-body { 
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .main-ass {
+        width: 90%;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100px;
+    }
+    .small-ass {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100px;
+    }
+
+    #contact-info.content-body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    #contact-info.content-body p {
+        width: 50%;
+    }
+    
+}
+
+
+
+
